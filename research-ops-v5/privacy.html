@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy practices for the personal Research Ops V5 read-only Google integration.">
+  <title>Privacy Policy — Research Ops V5</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #172033; background: #f5f7fb; }
+    body { max-width: 760px; margin: 0 auto; padding: 3rem 1.25rem; line-height: 1.65; }
+    main { background: white; border: 1px solid #dce3ee; border-radius: 16px; padding: clamp(1.25rem, 5vw, 2.5rem); }
+    h1, h2 { line-height: 1.2; } h1 { font-size: clamp(2rem, 6vw, 3rem); letter-spacing: -.03em; }
+    a { color: #174ea6; }
+  </style>
+</head>
+<body>
+<main>
+  <p><a href="./">Research Ops V5</a></p>
+  <h1>Privacy Policy</h1>
+  <p><strong>Effective date:</strong> November 9, 2026</p>
+  <p>Research Ops V5 is a personal-use PhD application assistant operated by Sayem Chowdhury. It is not offered to the public. This policy explains how its read-only Google integration handles the account owner's information.</p>
+
+  <h2>Google data accessed</h2>
+  <p>When the owner authorizes the integration, it uses read-only Google APIs for Gmail, Google Calendar, and Google Sheets. It may also use a separate, explicitly authorized read-only grant to inspect Apps Script project source during a manual safety audit.</p>
+  <ul>
+    <li><strong>Gmail:</strong> message and thread identifiers, headers, timestamps, labels, and short snippets may be processed to distinguish academic correspondence from automated or unrelated mail. For a likely interview invitation, the system may temporarily inspect text-only message content when its MIME structure confirms there are no attachments. It does not download attachments.</li>
+    <li><strong>Calendar:</strong> event identifiers, titles, dates, times, and timezone information may be processed to identify interviews and schedule changes.</li>
+    <li><strong>Sheets:</strong> selected application, contact, status, and deadline fields may be read to match events to the owner's academic records.</li>
+    <li><strong>Apps Script source:</strong> source code may be read under a separate, explicitly authorized manual audit grant. Owner-approved source editing, when needed, is a separate local maintenance operation and is not used by the scheduled Workspace monitor.</li>
+  </ul>
+
+  <h2>How data is used</h2>
+  <p>Google data is used only to reconcile correspondence and events with the owner's PhD application records, deduplicate actions, calculate urgency, and prepare private operational summaries. Email text is transient classification input. Saved daily and weekly briefings omit raw subject lines, snippets, message bodies, and document content. Persisted runtime state is minimized to the event and action identifiers, categories, dates, deadlines, source references, verification status, and derived preparation items needed for deduplication, recovery, and review.</p>
+  <p>The current read-only workflow uses project rules rather than sending Google data to an AI inference provider. The optional Gemini staging reader is not enabled. External notification delivery is not enabled.</p>
+
+  <h2>Where data is processed and retained</h2>
+  <p>Processing can occur on the owner's computer or on GitHub-hosted Actions runners in the owner's private repository. The workflow may retain minimized checkpoints, deduplication state, action summaries, and operational diagnostics in private GitHub Actions artifacts for up to 30 days. These records can include academic event categories, dates, and the minimum evidence needed to resume processing; they do not include full email bodies or attachments. Repository access is controlled by GitHub permissions.</p>
+  <p>OAuth credentials are kept outside the source repository, either in the owner's local credential storage or in GitHub Actions encrypted secrets. A runner may use a temporary credential file during a run and removes that file afterward. The owner is responsible for the security of their computer and repository access.</p>
+
+  <h2>Sharing</h2>
+  <p>Google data is not sold or used for advertising. The read-only monitor sends data only to Google services and the owner's private GitHub repository and hosted workflow for processing and checkpoint storage. Repository collaborators authorized by the owner may be able to view retained artifacts. This personal tool has no public sign-up or multi-user workflow.</p>
+
+  <h2>Choices and deletion</h2>
+  <p>The owner can stop future access by revoking the application's Google account access. The owner can delete local credential files, GitHub Actions artifacts, and repository secrets through the corresponding account settings. Existing data held by Google or GitHub remains subject to those providers' retention and deletion controls.</p>
+
+  <h2>Contact</h2>
+  <p>For questions about this personal tool or this policy, contact <a href="mailto:m.sayem.c@gmail.com">m.sayem.c@gmail.com</a>.</p>
+  <p><a href="terms.html">Terms of Use</a></p>
+</main>
+</body>
+</html>
