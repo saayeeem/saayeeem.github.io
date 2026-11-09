@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Information about the personal, read-only Research Ops V5 assistant and its Google account data practices.">
+  <title>Research Ops V5 — Read-only assistant</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, -apple-system, "Segoe UI", sans-serif; color: #172033; background: #f5f7fb; }
+    body { max-width: 760px; margin: 0 auto; padding: 3rem 1.25rem; line-height: 1.65; }
+    main { background: white; border: 1px solid #dce3ee; border-radius: 16px; padding: clamp(1.25rem, 5vw, 2.5rem); }
+    h1, h2 { line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 6vw, 3rem); letter-spacing: -.03em; }
+    .label { color: #3158a6; font-weight: 700; }
+    nav { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
+    a { color: #174ea6; }
+    footer { margin-top: 1.5rem; color: #526078; font-size: .95rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="label">Personal-use project · Google access is read-only</p>
+    <h1>Research Ops V5</h1>
+    <p>Research Ops V5 is a personal assistant used by its owner to organize PhD opportunities, applications, academic correspondence, and deadlines.</p>
+    <p>The Google integration reads the owner's Gmail, selected Google Sheets application records, and Google Calendar events to identify academic actions and prepare private summaries. It uses deterministic project rules to classify evidence and maintain a deduplicated action history.</p>
+    <h2>What this integration does</h2>
+    <ul>
+      <li>Reads academic email details to identify meaningful replies and requests. For a likely interview message, it may temporarily inspect text-only content when the message has no attachments.</li>
+      <li>Reads selected application and deadline fields from Google Sheets, and event timing details from Google Calendar.</li>
+      <li>Produces private action summaries and briefings for the account owner.</li>
+    </ul>
+    <h2>What it does not do</h2>
+    <ul>
+      <li>It does not send or draft email, change Gmail labels, edit Google Sheets, create or modify Calendar events, or submit applications.</li>
+      <li>It does not download email attachments or send Google account data to an AI model provider.</li>
+      <li>It is a single-owner personal tool with no public sign-up or multi-user workflow.</li>
+    </ul>
+    <p>Read the <a href="privacy.html">Privacy Policy</a> for data handling details and the <a href="terms.html">Terms of Use</a>.</p>
+    <nav aria-label="Policy links"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="mailto:m.sayem.c@gmail.com">Contact</a></nav>
+  </main>
+  <footer>Personal project operated by Sayem Chowdhury. Updated November 9, 2026.</footer>
+</body>
+</html>
