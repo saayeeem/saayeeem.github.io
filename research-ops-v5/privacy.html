@@ -17,7 +17,7 @@
 <main>
   <p><a href="./">Research Ops V5</a></p>
   <h1>Privacy Policy</h1>
-  <p><strong>Effective date:</strong> November 9, 2026</p>
+  <p><strong>Effective date:</strong> November 10, 2026</p>
   <p>Research Ops V5 is a personal-use PhD application assistant operated by Sayem Chowdhury. It is not offered to the public. This policy explains how its read-only Google integration handles the account owner's information.</p>
 
   <h2>Google data accessed</h2>
@@ -31,17 +31,22 @@
 
   <h2>How data is used</h2>
   <p>Google data is used only to reconcile correspondence and events with the owner's PhD application records, deduplicate actions, calculate urgency, and prepare private operational summaries. Email text is transient classification input. Saved daily and weekly briefings omit raw subject lines, snippets, message bodies, and document content. Persisted runtime state is minimized to the event and action identifiers, categories, dates, deadlines, source references, verification status, and derived preparation items needed for deduplication, recovery, and review.</p>
-  <p>The current read-only workflow uses project rules rather than sending Google data to an AI inference provider. The optional Gemini staging reader is not enabled. External notification delivery is not enabled.</p>
+  <p>The current read-only workflow classifies Google data using deterministic project rules. Optional Telegram alerts require separate owner approval and configuration of a specific private recipient.</p>
+
+  <h2>Optional Telegram alerts</h2>
+  <p>When the owner activates alerts, the system sends a short event category, a generic required action, and an opaque event reference to the owner's configured private Telegram chat. These categories may reveal that an academic reply, interview, document request, decision, or urgent deadline requires attention. An approved alert path may include a verified Gmail thread link so the owner can open the original evidence. The link can reveal a thread identifier and requires the owner's Google account access to read the message.</p>
+  <p>Alert content is limited to this summary and any verified source link. Google credentials, email bodies and subject lines, CV contents, attachments, application files, and meeting links are excluded from push messages. Telegram processes the transmitted alert and recipient chat identifier under its <a href="https://telegram.org/privacy">Privacy Policy</a>. The bot token and recipient configuration are kept in protected runtime secrets. The system stores minimized delivery attempts and outcomes with its action state for deduplication and recovery.</p>
 
   <h2>Where data is processed and retained</h2>
   <p>Processing can occur on the owner's computer or on GitHub-hosted Actions runners in the owner's private repository. The workflow may retain minimized checkpoints, deduplication state, action summaries, and operational diagnostics in private GitHub Actions artifacts for up to 30 days. These records can include academic event categories, dates, and the minimum evidence needed to resume processing; they do not include full email bodies or attachments. Repository access is controlled by GitHub permissions.</p>
   <p>OAuth credentials are kept outside the source repository, either in the owner's local credential storage or in GitHub Actions encrypted secrets. A runner may use a temporary credential file during a run and removes that file afterward. The owner is responsible for the security of their computer and repository access.</p>
 
   <h2>Sharing</h2>
-  <p>Google data is not sold or used for advertising. The read-only monitor sends data only to Google services and the owner's private GitHub repository and hosted workflow for processing and checkpoint storage. Repository collaborators authorized by the owner may be able to view retained artifacts. This personal tool has no public sign-up or multi-user workflow.</p>
+  <p>Google data is used for the owner's academic workflow. Google services and the owner's private GitHub repository and hosted workflow process the data and retain minimized checkpoints. If separately activated, Telegram also receives the limited alert information described above. Repository collaborators authorized by the owner may be able to view retained artifacts. This personal tool has no public sign-up or multi-user workflow.</p>
 
   <h2>Choices and deletion</h2>
   <p>The owner can stop future access by revoking the application's Google account access. The owner can delete local credential files, GitHub Actions artifacts, and repository secrets through the corresponding account settings. Existing data held by Google or GitHub remains subject to those providers' retention and deletion controls.</p>
+  <p>The owner can stop future Telegram alerts by disabling the delivery gate or removing the bot credentials. Existing messages can be deleted through Telegram. Telegram's own retention and deletion rules apply to information it has already received.</p>
 
   <h2>Contact</h2>
   <p>For questions about this personal tool or this policy, contact <a href="mailto:m.sayem.c@gmail.com">m.sayem.c@gmail.com</a>.</p>
